@@ -23,7 +23,7 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const array = [1, 2, 3, 4, 5]
+const array = [1, 2, 3, 4, 5];
 
 function filter(array, callback) {
     const result = [];
@@ -38,9 +38,8 @@ function filter(array, callback) {
     return result;
 }
 
-const oddNumbers = filter(array,(element, index) => {
+const oddNumbers = filter(array, (element, index) => {
     return element % 2 !== 0;
 });
 
-console.log(evenNumbers)
-
+console.log(oddNumbers); 
