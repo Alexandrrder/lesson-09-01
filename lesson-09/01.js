@@ -25,7 +25,22 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 
 const array = [1, 2, 3, 4, 5]
 
-const filter = array.filter((element) => {
+function filter(array, callback) {
+    const result = [];
+
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+
+        if (callback(element, index)) {
+            result.push(element);
+        }
+    }
+    return result;
+}
+
+const oddNumbers = filter(array,(element, index) => {
     return element % 2 !== 0;
-})
-console.log(filter)
+});
+
+console.log(evenNumbers)
+
